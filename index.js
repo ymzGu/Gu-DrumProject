@@ -1,5 +1,7 @@
 //精简易懂版
 //检测按钮按下：
+window.onload = function(){
+
 var allButtons = document.querySelectorAll(".drum");//所有按钮元素
 
 for (let i=0; i<allButtons.length; i++){         // i 不要忘记先定义！！！！！
@@ -17,43 +19,37 @@ function makeSound(key){
     switch(key){ 
         case "w":
             var tom1 = new Audio("sounds/tom-1.mp3");
-          tom1.preload = "auto";
             tom1.play();// .play()不要忘记
             break;
          
         case "a":
             var tom2 = new Audio("sounds/tom-2.mp3");
-          tom2.preload = "auto";
             tom2.play();
             break;
 
         case "s":
             var tom3 = new Audio("sounds/tom-3.mp3");
-          tom3.preload = "auto";
             tom3.play();
             break; 
 
         case "d":
             var tom4 = new Audio("sounds/tom-4.mp3");
-          tom4.preload = "auto";
             tom4.play();
             break;
              
         case "j":
             var tom5 = new Audio("sounds/crash.mp3");
-          tom5.preload = "auto";
             tom5.play();
             break;
                 
         case "k":
             var tom6 = new Audio("sounds/kick-bass.mp3");
-          tom6.preload = "auto";
             tom6.play();
             break;    
             
         case "l":
             var tom7 = new Audio("sounds/snare.mp3");
-          tom7.preload = "auto";
+            tom7.preload = "auto";
             tom7.play();
             break; 
         
@@ -68,7 +64,8 @@ function buttonAnimation(currentKey){
         activeButton.classList.remove("pressed");
     },100);
 }
-
+    
+}
 
 
 //原版：
@@ -82,10 +79,6 @@ function buttonAnimation(currentKey){
 //         buttonAnimation(buttonInnerHTML);
 //     })
 // }
-
-
- 
-
 
 // document.addEventListener("keydown",function(event){
 //     makeSound(event.key);
@@ -133,47 +126,4 @@ function buttonAnimation(currentKey){
 //         default:console.log(buttonInnerText);
 //     }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var dumNumber = document.querySelectorAll(".drum").length;
-// for(i=0; i<dumNumber; i++){
-//     document.querySelectorAll(".drum")[i].addEventListener("click",function(){alert("I am clicked");});
-// }
-
-
-
-
-// var drums = document.querySelectorAll(".drum");
-// drums[0].addEventListener("click", crash);
-// function crash (){
-//     var audio0 = new Audio("sounds/crash.mp3");   
-//     audio0.play();
-// }
-
-
-
-//     document.addEventListener("keydown",playSound);
-// function playSound(){
-//     var audio0= new Audio("sounds/crash.mp3");
-//     audio0.play();
-// }
-
-
-
-
-
 
